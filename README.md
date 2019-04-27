@@ -2,7 +2,7 @@
 
 ## Introduction:
 The objective of this exercise is to develop an approach to find the clusters of similar trajectories and identify those trajectories which do not fit in any of these clusters and thus, can be classified as an outlier.
-In this exercise you are provided with about 7079 trajectories of taxi trips which is extarcted from the sample of T-Drive Trajectory dataset.
+In this exercise you are provided with 7079 trajectories of taxi trips which is extarcted from the sample of T-Drive Trajectory dataset.
 
 ## Dataset:
 ### Original T-Drive trajectory data sample.
