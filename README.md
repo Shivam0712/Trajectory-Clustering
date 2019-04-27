@@ -20,6 +20,9 @@ You can find the original dataset in this google drive.
 **The final processed data is present in the google drive with name: .**
 
 ## The Baseline Approach
-In this baseline approach we extrapolate the trajectories of each trip and find their positional coordinate at 5 minutes interval within the given 2-hour window. We do this to have a uniform number of records(24: 120/5) for each trip. After obtaining
+In this baseline approach we extrapolate the trajectories of each trip and find their positional coordinate at 5 minutes interval within the given 2-hour window. We do this to have a uniform number of records(24: 120/5) for each trip. After obtaining these 24 positional coordinates for each trip, we run an k-means algorithm to find the clusters of similar trajectories.
+This whole approach is conducted in following steps:
+1. Further preprocessing of selected 7079 to remove noise. \n Those trips which
+2. 
 
 
