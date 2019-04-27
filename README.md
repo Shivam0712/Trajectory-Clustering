@@ -17,7 +17,7 @@ You can find the original dataset [here](https://drive.google.com/file/d/1pzaGZa
 4. Thus, our final dataset for this task contains 7079 trips and total 258273 positional records for them.
 
 **Note: The script used to do this processing is [Extract Trajectories.ipynb](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/Extract%20Trajectories.ipynb) .**
-**The final processed data is  .**
+**The final processed data can be found [here] (https://github.com/Shivam0712/Trajectory-Clustering/blob/master/20190425_trajectories.csv).**
 
 ## The Baseline Approach
 In this baseline approach we extrapolate the trajectories of each trip and find their positional coordinate at 5 minutes interval within the given 2-hour time window. We do this to have a uniform number of records(24: 120/5) for each trip. After obtaining these 24 positional coordinates for each trip, we run k-means algorithm to find the clusters of similar trajectories.
@@ -27,8 +27,9 @@ This whole approach is conducted in following steps:
 1. Those trips which had any positional coordinate far away from the main bunch of positional coordinates were removed.
 2. Unique number of trips after this filtering: 4234; Total positional coordinates: 258273
 3. Plot of all the trajectories:
+![All Trajectories](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/AllTrajectories.png)
 4. Some sample trajectories:
-![Drag Racing](Dragster.jpg)
+![Sample Trajectories](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/IndiviDualTrajectories.png)
   
 ### 2. Extrapolation of trajectories:
 1. For each trip the, time of earliest record was picked and marked as first timestep.
