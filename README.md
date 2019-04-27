@@ -22,13 +22,37 @@ You can find the original dataset in this google drive.
 ## The Baseline Approach
 In this baseline approach we extrapolate the trajectories of each trip and find their positional coordinate at 5 minutes interval within the given 2-hour window. We do this to have a uniform number of records(24: 120/5) for each trip. After obtaining these 24 positional coordinates for each trip, we run an k-means algorithm to find the clusters of similar trajectories.
 This whole approach is conducted in following steps:
-1. Noise filtering from the selected 7079 trips.
-i. Those trips which had any positional coordinate far away from the main bunch of positional coordinates were removed.
-  b. Unique number of trips after this filtering: 4234; Total positional coordinates: 258273
-  c. Plot of all the trajectories:
-  d. Some sample trajectories:
+
+### 1. Noise filtering from the selected 7079 trips.
+1. Those trips which had any positional coordinate far away from the main bunch of positional coordinates were removed.
+2. Unique number of trips after this filtering: 4234; Total positional coordinates: 258273
+3. Plot of all the trajectories:
+4. Some sample trajectories:
   
-2. Extrapolation of trajectories:
-  a. 
+### 2. Extrapolation of trajectories:
+1. For each trip the, time of earliest record was picked and marked as first timestep.
+2. In the 2-hour period starting with the time of this first timestep, 23 timesteps with 5 minute interval between each were created.
+3. The positional coordinate for these 24 timesteps were extrapolated from the positions of the original records having time immediately before and after the time of the given time step.
+4. Due to extrapolation positional coordinates of some trips became noisy and were removed from the dataset.
+5. Unique number of trips after extrapolation: 4225; Total positional coordinates: 101400
+6. Plot of extrapolated Trajectories:
+
+
+### 3. Clustering the trajectories:
+1. K-Mean Clustering is used to obtain the clusters of similar trajectories.
+2. The silhouette curve is used to find the optimum  number of clusters.
+3. The plot of final clusters and their centroids are:
+
+
+### Questions:
+
+Check the notebook: to learn about the implementation of the approach mentioned above answer the following questions:
+
+1. Anlayze the approach and comment on the shortcoming and limitation of the given approach.
+2. What changes we observe in the plots before and after the extrapolation and why?
+3. When noise filtering was done before the extrapolation why we need to do this again after it?
+4. The silhouette curve helped us to determine the right number of clusters which is 25. Comment your opinion on this.
+5. Observe the plot with the final clusters and write down your observation about these clusters.
+6. Propose a method to do this task better than the current approach and make a notebook with its implementation.
 
 
