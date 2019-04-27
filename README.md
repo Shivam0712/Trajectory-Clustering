@@ -18,7 +18,7 @@ You can find the original dataset [here](https://drive.google.com/file/d/1pzaGZa
 
 **Note: The script used to do this processing is [Extract Trajectories.ipynb](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/Extract%20Trajectories.ipynb).**
 
-**The final processed data can be found [here] (https://github.com/Shivam0712/Trajectory-Clustering/blob/master/20190425_trajectories.csv).**
+**The final processed data can be found [here](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/20190425_trajectories.csv).**
 
 ## The Baseline Approach
 In this baseline approach we extrapolate the trajectories of each trip and find their positional coordinate at 5 minutes interval within the given 2-hour time window. We do this to have a uniform number of records(24: 120/5) for each trip. After obtaining these 24 positional coordinates for each trip, we run k-means algorithm to find the clusters of similar trajectories.
