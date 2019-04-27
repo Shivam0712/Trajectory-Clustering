@@ -16,7 +16,8 @@ You can find the original dataset [here](https://drive.google.com/file/d/1pzaGZa
 3. From this subset of data only those taxis are picked which have 20 to 60 records in this 2-hour window of maximum records.
 4. Thus, our final dataset for this task contains 7079 trips and total 258273 positional records for them.
 
-**Note: The script used to do this processing is [Extract Trajectories.ipynb](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/Extract%20Trajectories.ipynb) .**
+**Note: The script used to do this processing is [Extract Trajectories.ipynb](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/Extract%20Trajectories.ipynb).**
+
 **The final processed data can be found [here] (https://github.com/Shivam0712/Trajectory-Clustering/blob/master/20190425_trajectories.csv).**
 
 ## The Baseline Approach
@@ -31,6 +32,8 @@ This whole approach is conducted in following steps:
 4. Some sample trajectories:
 ![Sample Trajectories](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/IndiviDualTrajectories.png)
   
+**The processed data after this step can be found [here](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/20190425_ProcessedTaxiTrajectories.csv)** 
+  
 ### 2. Extrapolation of trajectories:
 1. For each trip the, time of earliest record was picked and marked as first timestep.
 2. In the 2-hour period starting with the time of this first timestep, 23 timesteps with 5 minute interval between each were created.
@@ -38,12 +41,16 @@ This whole approach is conducted in following steps:
 4. Those trips which had any positional coordinate far away from the main bunch of positional coordinates were removed as noise.
 5. Unique number of trips after extrapolation: 4225; Total positional coordinates: 101400
 6. Plot of extrapolated Trajectories:
+![Extrapolated Trajectories](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/ExtrapolatedTrajectories.png)
 
+**The processed data after this step can be found [here](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/20190425_Extrapolate.csv)** 
 
 ### 3. Clustering the trajectories:
 1. K-Mean Clustering is used to obtain the clusters of similar trajectories.
 2. The silhouette curve is used to find the optimum  number of clusters.
+![Silhouette Curve](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/silhoutte.png)
 3. The plot of final clusters and their centroids are:
+![Trajectories Clusters](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/FinalClusterCentroids.png)
 
 
 ### Questions:
