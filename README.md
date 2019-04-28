@@ -39,7 +39,7 @@ This whole approach is conducted in following steps:
 2. In the 2-hour period starting with the time of this first timestep, 23 timesteps with 5 minute interval between each were created.
 3. The positional coordinate for these 24 timesteps were extrapolated from the positions of the original records having time immediately before and after the time of the given time step.
 4. Those trips which had any positional coordinate far away from the main bunch of positional coordinates were removed as noise.
-5. Unique number of trips after extrapolation: 4225; Total positional coordinates: 101400
+5. Unique number of trips after extrapolation: 3612; Total positional coordinates: 86688
 6. Plot of extrapolated Trajectories:
 ![Extrapolated Trajectories](https://github.com/Shivam0712/Trajectory-Clustering/blob/master/ExtrapolatedTrajectories.png)
 
@@ -58,10 +58,7 @@ This whole approach is conducted in following steps:
 Check the notebook: to learn about the implementation of the approach mentioned above and answer the following questions:
 
 1. Anlayze the approach and comment on the limitations of the given approach.
-2. What changes we observe in the plots before and after the extrapolation and why?
-3. When noise filtering was done before the extrapolation why we need to do this again after it?
-4. The silhouette curve helped us to determine the right number of clusters which is 25. Comment your opinion on this.
-5. Observe the plot with the final clusters and write down your observation about these clusters.
-6. Propose a method to do this task better than the current approach and make a notebook with its implementation.
+2. Observe the plot with the final clusters and write down your observation about these clusters.
+3. Propose a method to do this task better than the current approach and make a notebook with its implementation.
 
 
